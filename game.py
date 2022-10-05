@@ -23,6 +23,14 @@ class Game:
         pass
 
     def start(self, player1_name: str, player2_name: str) -> str:
-        pass
+        self.active = True
 
-    
+        while self.active:
+            if self.add_city(self.queue[0], 'Moscow'):
+                self.append(self.pop(0))
+            else:
+                self.queue.remove(self.queue[0])
+
+                if len(self.queue) == 1:
+                    self.active = False
+                    return self.queue[0]

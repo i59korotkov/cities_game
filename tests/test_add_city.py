@@ -10,7 +10,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_add_playernotexist(self):
         G = Game(['Moscow'])
-        self.assertRaises(G.add_city('Igor', 'Moscow'), ValueError)
+        with self.assertRaises(ValueError):
+            G.add_city('Igor', 'Moscow')
 
     def test_add_sitynotexist(self):
         G = Game(['Moscow'])

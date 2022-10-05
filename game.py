@@ -22,7 +22,7 @@ class Game:
     def add_city(self, player_name: str, city: str) -> bool:
         pass
 
-    def start(self, player1_name: str, player2_name: str) -> str:
+    def start(self) -> str:
         self.active = True
 
         while self.active:

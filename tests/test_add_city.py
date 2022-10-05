@@ -19,7 +19,7 @@ class MyTestCase(unittest.TestCase):
         self.assertFalse(G.add_city('Igor', 'MMOOSSCCOOWW'))
 
     def test_add_sitydoubles(self):
-        G = Game(['Mathba, Amsterdam'])
+        G = Game(['Mathba', 'Amsterdam'])
         G.add_player('Igor')
         G.add_player('Ilya')
         G.add_city('Igor', 'Amsterdam')
